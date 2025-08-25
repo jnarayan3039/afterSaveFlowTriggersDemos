@@ -1,0 +1,6 @@
+<apex:page standardController="Job_Application__c"
+           recordSetVar="jobApps"
+           extensions="BulkShortlistListController"
+           action="{!processShortlist}">
+    <apex:outputText value="Processing shortlisted job applications..." />
+</apex:page>
