@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body style="font-family: Arial, Helvetica, sans-serif; font-size:14px; color:#222; line-height:1.5;">
+    <p>Hello HR Team,</p>
+
+    <p>
+      An interview process has completed and the candidate was <strong>selected</strong>.
+      A new <strong>Offer</strong> has been created in Salesforce.
+    </p>
+
+    <table cellpadding="6" cellspacing="0" border="0" style="border-collapse:collapse; background:#f7f9fb; border:1px solid #e3e8ee;">
+      <tr>
+        <td><strong>Candidate</strong></td>
+        <td>{!Offer__c.Candidate__r.Name}</td>
+      </tr>
+      <tr>
+        <td><strong>Position</strong></td>
+        <td>{!Offer__c.Position__r.Name}</td>
+      </tr>
+      <tr>
+        <td><strong>Offer Status</strong></td>
+        <td>{!Offer__c.Status__c}</td>
+      </tr>
+      <tr>
+        <td><strong>Offer Date</strong></td>
+        <td>{!Offer__c.Offer_Date__c}</td>
+      </tr>
+      <tr>
+        <td><strong>Proposed Start Date</strong></td>
+        <td>{!Offer__c.Start_Date__c}</td>
+      </tr>
+      <tr>
+        <td><strong>Valid Until</strong></td>
+        <td>{!Offer__c.Valid_Until__c}</td>
+      </tr>
+    </table>
+
+    <p style="margin-top:14px;">
+      <a href="/{!Offer__c.Id}"
+         style="display:inline-block; padding:10px 14px; background:#1b73e8; color:#fff; text-decoration:none; border-radius:4px;">
+         View Offer in Salesforce
+      </a>
+    </p>
+
+    <p>Please review the offer details and proceed with the next steps in the hiring process.</p>
+
+    <p>Regards,<br/>
+       Recruiting Automation</p>
+  </body>
+</html>

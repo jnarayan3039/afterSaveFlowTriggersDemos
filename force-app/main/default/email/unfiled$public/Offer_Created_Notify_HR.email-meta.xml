@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Offer Created (Notify HR)</name>
+    <style>none</style>
+    <subject>New Offer Created for {!Offer__c.Candidate__r.Name} – {!Offer__c.Position__r.Name}</subject>
+    <textOnly>Hello HR Team,
+
+An interview process has completed and the candidate was selected. A new Offer has been created in Salesforce.
+
+Candidate  {!Offer__c.Candidate__r.Name}
+Position  {!Offer__c.Position__r.Name}
+Offer Status  {!Offer__c.Status__c}
+Offer Date  {!Offer__c.Offer_Date__c}
+Proposed Start Date  {!Offer__c.Start_Date__c}
+Valid Until  {!Offer__c.Valid_Until__c}
+
+View Offer in Salesforce
+
+Please review the offer details and proceed with the next steps in the hiring process.
+
+Regards,
+Recruiting Automation</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
