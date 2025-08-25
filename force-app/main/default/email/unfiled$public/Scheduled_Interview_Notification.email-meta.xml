@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Scheduled Interview Notification</name>
+    <style>none</style>
+    <subject>Interview Scheduled – {!Interview__c.Job_Application__r.Position__r.Name} with {!Interview__c.Interviewer__r.Name}</subject>
+    <textOnly>Dear {!Interview__c.Job_Application__r.Candidate__r.Name},
+
+We are pleased to inform you that your interview has been scheduled for the position of {!Interview__c.Job_Application__r.Position__r.Name}.
+
+Date &amp; Time  {!Interview__c.Interview_Date_Time__c}
+Interviewer  {!Interview__c.Interviewer__r.Employee__r.Name}
+Meeting Link  {!Interview__c.Meeting_Link__c}
+
+Please ensure that you are prepared and available at the scheduled time. If you need to reschedule, kindly reach out to your recruiter as soon as possible.
+
+We look forward to speaking with you.
+Regards,
+Recruiting Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

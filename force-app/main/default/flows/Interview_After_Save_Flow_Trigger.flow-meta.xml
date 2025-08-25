@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Send_Email_Remained_about_upcoming_interview</name>
-        <label>Send Email Remained about upcoming interview</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <actionName>Job_Application__c.Remainder_Notification_Email</actionName>
-        <actionType>emailAlert</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>SObjectRowId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>Job_Application__c.Remainder_Notification_Email</nameSegment>
-        <offset>0</offset>
-    </actionCalls>
-    <actionCalls>
         <name>Send_Email_to_HR</name>
         <label>Send Email to HR</label>
         <locationX>0</locationX>
@@ -50,6 +33,48 @@
             <name>recipientId</name>
             <value>
                 <elementReference>$Record.Job_Application__r.Recruiter__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>1.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Notification_to_Interviewer_24_hours_prior_the_interview</name>
+        <label>Send Notification to Interviewer 24 hours prior the interview</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Job_Application__r.Candidate__r.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useEmailTemplate</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailTemplateId</name>
+            <value>
+                <stringValue>00Xaj00000LsxNBEAZ</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Job_Application__r.Candidate__r.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <stringValue>{!$Record.Job_Application__c}</stringValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -298,7 +323,7 @@
         <scheduledPaths>
             <name>X1_day_before</name>
             <connector>
-                <targetReference>Send_Email_Remained_about_upcoming_interview</targetReference>
+                <targetReference>Send_Notification_to_Interviewer_24_hours_prior_the_interview</targetReference>
             </connector>
             <label>1 day before</label>
             <offsetNumber>-1</offsetNumber>
