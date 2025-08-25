@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Title_cannot_begin_with_word_Test</fullName>
+    <active>true</active>
+    <errorConditionFormula>BEGINS( Name ,&quot;Test&quot;)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Job Title cannot begin with the word ‘Test’.”</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Years_of_exp_must_be_a_whole_number</fullName>
+    <active>true</active>
+    <errorConditionFormula>MOD( Years_of_Experience__c ,1) &lt;&gt; 0</errorConditionFormula>
+    <errorDisplayField>Years_of_Experience__c</errorDisplayField>
+    <errorMessage>Years of Experience must be a whole number (e.g., 1, 2, 3)</errorMessage>
+</ValidationRule>

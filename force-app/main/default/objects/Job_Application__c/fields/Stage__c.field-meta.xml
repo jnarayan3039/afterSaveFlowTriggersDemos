@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Initial Screening</fullName>
+                <default>false</default>
+                <label>Initial Screening</label>
+            </value>
+            <value>
+                <fullName>Phone Interview</fullName>
+                <default>false</default>
+                <label>Phone Interview</label>
+            </value>
+            <value>
+                <fullName>Technical Interview</fullName>
+                <default>false</default>
+                <label>Technical Interview</label>
+            </value>
+            <value>
+                <fullName>Manager Round</fullName>
+                <default>false</default>
+                <label>Manager Round</label>
+            </value>
+            <value>
+                <fullName>Final Round</fullName>
+                <default>false</default>
+                <label>Final Round</label>
+            </value>
+            <value>
+                <fullName>Offer Accepted</fullName>
+                <default>false</default>
+                <label>Offer Accepted</label>
+            </value>
+            <value>
+                <fullName>Offer Declined</fullName>
+                <default>false</default>
+                <label>Offer Declined</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+            <value>
+                <fullName>Offer Extended</fullName>
+                <default>false</default>
+                <label>Offer Extended</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
